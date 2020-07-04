@@ -257,7 +257,7 @@
 
 // Footer
 
-{{ if .Site.Params.enableFooter }}
+{{ if or .Site.Params.enableFooter .Site.Params.displayFooterInHome }}
     {{ with .Site.Params.iconColor }}
         $iconColor: {{ . }};
     {{ end }}
